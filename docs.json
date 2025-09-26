@@ -1,0 +1,182 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Aipolabs agent-computer interface (ACI)",
+  "colors": {
+    "primary": "#6269D2",
+    "light": "#FFFFFF",
+    "dark": "#1D2275"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "introduction/overview",
+              "introduction/quickstart"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "core-concepts/app",
+              "core-concepts/app-configuration",
+              "core-concepts/function",
+              "core-concepts/linked-account",
+              "core-concepts/project",
+              "core-concepts/agent"
+            ]
+          },
+          {
+            "group": "SDK",
+            "pages": [
+              "sdk/intro",
+              "sdk/metafunctions",
+              "sdk/tool-use-patterns",
+              "sdk/custom-functions"
+            ]
+          },
+          {
+            "group": "MCP Servers",
+            "pages": [
+              "mcp-servers/introduction",
+              "mcp-servers/unified-server",
+              "mcp-servers/apps-server"
+            ]
+          },
+          {
+            "group": "Agent Playground",
+            "pages": [
+              "agent-playground/introduction"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "advanced/oauth2-whitelabel"              
+            ]
+          },
+          {
+            "group": "Cookbooks",
+            "pages": [
+              "cookbooks/camel-ai"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Agent Examples",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "agent-examples/overview"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "api-reference/overview"
+            ]
+          },
+          {
+            "group": "Endpoints",
+            "pages": [
+              {
+                "group": "Apps",
+                "pages": [
+                  "api-reference/apps/search-apps",
+                  "api-reference/apps/get-app-details"
+                ]
+              },
+              {
+                "group": "Functions",
+                "pages": [
+                  "api-reference/functions/search-functions",
+                  "api-reference/functions/get-function-definition",
+                  "api-reference/functions/execute"
+                ]
+              },
+              {
+                "group": "App Configurations",
+                "pages": [
+                  "api-reference/app-configurations/create-app-configuration",
+                  "api-reference/app-configurations/list-app-configurations",
+                  "api-reference/app-configurations/get-app-configuration",
+                  "api-reference/app-configurations/update-app-configuration",
+                  "api-reference/app-configurations/delete-app-configuration"
+                ]
+              },
+              {
+                "group": "Linked Accounts",
+                "pages": [
+                  "api-reference/linked-accounts/list-linked-accounts",
+                  "api-reference/linked-accounts/get-linked-account",
+                  "api-reference/linked-accounts/link-oauth2-account",
+                  "api-reference/linked-accounts/linked-accounts-oauth2-callback",
+                  "api-reference/linked-accounts/delete-linked-account"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "GitHub",
+          "href": "https://github.com/aipotheosis-labs/aci",
+          "icon": "github"
+        },
+        {
+          "anchor": "Discord",
+          "href": "https://discord.gg/nnqFSzq2ne",
+          "icon": "discord"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:support@aipolabs.xyz"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://platform.aci.dev"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/AipoLabs",
+      "github": "https://github.com/aipotheosis-labs",
+      "linkedin": "https://www.linkedin.com/company/aipotheosis-labs-aipolabs/",
+      "discord": "https://discord.gg/nnqFSzq2ne"
+    }
+  },
+  "contextual": {
+   "options": [
+     "copy",
+     "view",
+     "chatgpt",
+     "claude"
+   ]
+ }
+}

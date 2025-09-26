@@ -1,0 +1,36 @@
+---
+title: 'Introduction'
+description: 'A playground to test you ACI.dev setup'
+icon: 'robot'
+---
+<Warning>Agent Playground is a beta feature and not recommended for production use. Expect limited stability and possible changes.</Warning>
+
+The Agent Playground provides a no-code environment where you can test AI agents performing tasks on behalf of users. This playground allows you to test how your agent will interact with various functions and applications without writing any code.
+
+<Frame>
+  <img src="/images/platform/agent-playground-snapshot.webp" alt="Agent Playground" />
+</Frame>
+
+<Warning>The agent playground operates in a stateless manner and we don't store any conversation history on the server side. Conversation history is cleared when you close the tab.</Warning>
+
+
+### Using the Playground
+
+<Frame>
+  <img src="/images/platform/agent-playground-concept.png" alt="Agent Playground Concept" />
+</Frame> 
+
+To use the Agent Playground, you need to configure the following settings:
+
+1. Select an existing Agent from the dropdown menu. (You can create and manage agents in the `Agents` tab)
+
+2. Select `Apps` you want to test. (Only apps that have been enabled for your selected agent will appear in this list)
+
+3. Select a Linked Account Owner ID. (The agent will only have access to linked accounts from this owner)
+
+4. Select `Functions` you want to test. (Only functions of selected apps will show up in dropdown) This allows you to control exactly which tool are available during testing.
+
+
+#### Play with the agent
+Once you've configured your settings, you can interact with the agent through a chat interface:
+e.g., "star github repo aipotheosis-labs/aci", "what is the top news today?"

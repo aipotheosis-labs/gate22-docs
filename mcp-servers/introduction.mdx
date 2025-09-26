@@ -1,0 +1,50 @@
+---
+title: 'Introduction'
+description: 'Introduction to ACI.dev MCP Servers'
+icon: 'code'
+---
+
+
+## Overview
+Apart from using ACI.dev's Apps/Functions (tools) directly via LLM function (tool) calls, we also provide two types of Model Context Protocol (MCP) servers that allow your MCP clients to access all Apps/Functions (tools) available on ACI.dev platform.
+The codebase is open source and can be found here: [aci-mcp <Icon icon="up-right-from-square"/>](https://github.com/aipotheosis-labs/aci-mcp).
+
+
+## Two Types of MCP Servers
+- **Apps MCP Server**: This server is similar to most of the existing MCP servers out there, where it exposes a set of functions from a specific app (e.g., Gmail, Github, etc.). However, our `Apps MCP Server` allows you to include multiple apps in a single server.
+
+  <Frame>
+    <img src="/images/apps-mcp-server-diagram.svg" alt="Apps MCP Server"/>
+  </Frame>
+- **Unified MCP Server**: This server is a dynamic server that provides two **meta** functions (tools) - `ACI_SEARCH_FUNCTIONS` and `ACI_EXECUTE_FUNCTION` to dynamically discover and execute **ANY** functions (tools) available on ACI.dev platform.
+
+  <Frame>
+    <img src="/images/unified-mcp-server-diagram.svg" alt="Unified MCP Server"/>
+  </Frame>
+
+## Comparison
+
+- **When to use the Apps MCP Server?**
+  - When you know exactly what apps the LLM/Agent needs in advance.
+  - When the number of apps, and therefore the associated functions, needed is relatively small. 
+    <Note>
+      There is no definitive answer to `what number of functions (tools) is too many?`, but the more functions (tools) you add to the model's context window, the lower the performance of the LLM function calling.
+    </Note>
+
+- **When to use the Unified MCP Server?**
+  - When you don't know exactly what apps the LLM/Agent needs in advance.
+  - When the number of apps and therefore the associated functions needed is large.
+  - When you want all future apps added to ACI.dev to be discoverable by your LLM/Agent without having to update the MCP command.
+
+
+## Next Steps
+
+Choose the MCP server that best fits your needs and follow the instructions in the respective sections to set it up.
+<CardGroup cols={2}>
+  <Card title="Unified MCP Server" icon="circle-nodes" href="/mcp-servers/unified-server">
+    A unified, dynamic MCP server that provides two meta functions (tools) to discover and execute ANY functions (tools) available on ACI.dev platform.
+  </Card>
+  <Card title="Apps MCP Server" icon="puzzle-piece" href="/mcp-servers/apps-server">
+    A traditional MCP server that directly exposes functions from specific apps that you pre-select, allowing multiple apps to be included in a single server.
+  </Card>
+</CardGroup>
