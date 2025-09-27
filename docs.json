@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Aipolabs agent-computer interface (ACI)",
+  "name": "ACI.dev Gate22",
   "colors": {
     "primary": "#6269D2",
     "light": "#FFFFFF",
@@ -21,111 +21,22 @@
             ]
           },
           {
-            "group": "Core Concepts",
+            "group": "Admin View",
             "pages": [
-              "core-concepts/app",
-              "core-concepts/app-configuration",
-              "core-concepts/function",
-              "core-concepts/linked-account",
-              "core-concepts/project",
-              "core-concepts/agent"
+              "admin-view/mcp-servers",
+              "admin-view/custom-mcp-servers",
+              "admin-view/configured-mcp-servers",
+              "admin-view/connected-accounts",
+              "admin-view/mcp-bundles",
+              "admin-view/teams-and-orgs"
             ]
           },
           {
-            "group": "SDK",
+            "group": "Member View",
             "pages": [
-              "sdk/intro",
-              "sdk/metafunctions",
-              "sdk/tool-use-patterns",
-              "sdk/custom-functions"
-            ]
-          },
-          {
-            "group": "MCP Servers",
-            "pages": [
-              "mcp-servers/introduction",
-              "mcp-servers/unified-server",
-              "mcp-servers/apps-server"
-            ]
-          },
-          {
-            "group": "Agent Playground",
-            "pages": [
-              "agent-playground/introduction"
-            ]
-          },
-          {
-            "group": "Advanced",
-            "pages": [
-              "advanced/oauth2-whitelabel"              
-            ]
-          },
-          {
-            "group": "Cookbooks",
-            "pages": [
-              "cookbooks/camel-ai"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Agent Examples",
-        "groups": [
-          {
-            "group": "Introduction",
-            "pages": [
-              "agent-examples/overview"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "Introduction",
-            "pages": [
-              "api-reference/overview"
-            ]
-          },
-          {
-            "group": "Endpoints",
-            "pages": [
-              {
-                "group": "Apps",
-                "pages": [
-                  "api-reference/apps/search-apps",
-                  "api-reference/apps/get-app-details"
-                ]
-              },
-              {
-                "group": "Functions",
-                "pages": [
-                  "api-reference/functions/search-functions",
-                  "api-reference/functions/get-function-definition",
-                  "api-reference/functions/execute"
-                ]
-              },
-              {
-                "group": "App Configurations",
-                "pages": [
-                  "api-reference/app-configurations/create-app-configuration",
-                  "api-reference/app-configurations/list-app-configurations",
-                  "api-reference/app-configurations/get-app-configuration",
-                  "api-reference/app-configurations/update-app-configuration",
-                  "api-reference/app-configurations/delete-app-configuration"
-                ]
-              },
-              {
-                "group": "Linked Accounts",
-                "pages": [
-                  "api-reference/linked-accounts/list-linked-accounts",
-                  "api-reference/linked-accounts/get-linked-account",
-                  "api-reference/linked-accounts/link-oauth2-account",
-                  "api-reference/linked-accounts/linked-accounts-oauth2-callback",
-                  "api-reference/linked-accounts/delete-linked-account"
-                ]
-              }
+              "member-view/available-mcp-servers",
+              "member-view/connected-accounts",
+              "member-view/mcp-bundles"
             ]
           }
         ]
@@ -135,7 +46,7 @@
       "anchors": [
         {
           "anchor": "GitHub",
-          "href": "https://github.com/aipotheosis-labs/aci",
+          "href": "https://github.com/aipotheosis-labs/gate22",
           "icon": "github"
         },
         {
@@ -160,7 +71,7 @@
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://platform.aci.dev"
+      "href": "https://gateway.aci.dev"
     }
   },
   "footer": {
