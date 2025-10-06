@@ -38,6 +38,14 @@
               "member-view/connected-accounts",
               "member-view/mcp-bundles"
             ]
+          },
+          {
+            "group": "MCP Servers",
+            "pages": [
+              "mcp-servers/introduction",
+              "mcp-servers/unified-server",
+              "mcp-servers/apps-server"
+            ]
           }
         ]
       }
