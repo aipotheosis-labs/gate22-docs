@@ -4,33 +4,56 @@ description: 'Create and manage custom MCP servers for your organization with ad
 icon: 'wrench'
 ---
 
-An `App Configuration` is created when you configure an `App` under a `Project`. It is a project-specific integration setting for a third-party service (an App) in the ACI platform. It represents:
+**Custom MCP Servers** allow you to bring any remote MCP server to be managed by Gate22. While you can browse and configure from 80+ pre-configured MCP servers, custom MCP servers give you the flexibility to integrate any MCP server that isn't already available in our catalog.
 
-<Frame>
-  <img src="/images/platform/app-configuration-popup.png" alt="App Configuration Concept Illustration" />
-</Frame>
+<Steps>
+  <Step title="Navigate to MCP Servers">
+    Browse the available MCP servers list and click "Add Custom MCP Server" to open the custom MCP server modal.
+    <Frame>
+      <img src="/images/platform/custom-mcp-add.png" alt="Add Custom MCP Server" />
+    </Frame>
+  </Step>
+  
+  <Step title="Enter MCP Details">
+    Configure your custom MCP server by entering the required information:
+    - Paste the remote MCP server URL
+    - Add a description for your team
+    - Configure server settings
+    <Frame>
+      <img src="/images/platform/custom-mcp-details.png" alt="Custom MCP Details" />
+    </Frame>
+  </Step>
+  
+  <Step title="Set up Operational Account">
+    <Warning>
+      **Important**: You **must** provide an operational account when adding a custom MCP server.
+    </Warning>
+    
+    The operational account is **only** used to retrieve tool lists from MCP servers, not by end users. This is required because:
+    - Gate22 uses a search-and-execute pattern for bundles
+    - Tool lists need to be embedded in our vector database ahead of time
+    - Most MCP servers require authentication to return their tool lists
+    <Frame>
+      <img src="/images/platform/custom-mcp-op-account.png" alt="Operational Account Setup" />
+    </Frame>
+  </Step>
+  
+  <Step title="Connect Account and Sync Tools">
+    After connecting your operational account, sync the tools to retrieve all tool descriptions and embed them for dynamic search.
+    
+    You'll see a diff showing what tools changed every time you sync:
+    - **New tools added**
+    - **Removed tools** 
+    - **Modified tools**
+    <Frame>
+      <img src="/images/platform/custom-mcp-sync.png" alt="Sync Tools" />
+    </Frame>
+  </Step>
+  
+</Steps>
 
-- **Integration Record**: The formal relationship between your Project and a specific App (like GitHub, Google Calendar, etc.)
-- **Authentication Strategy**: The selected security scheme (`OAuth2`, `API Key`, `No Auth`) used for authenticating with the App
-- **Security Overrides**: Custom authentication parameters that override default App settings (e.g., client IDs, secrets)
-- **Function Access Control**: Which specific functions from the App are enabled for use in your Project
-- **Linked Accounts Management**: Serves as the parent configuration for all individual user accounts connected to this App
+## Example: DeepWiki MCP
 
-<Note>
-  You **MUST** create an `App Configuration` before your AI agents can use an `App`. Each `Project` can have one configuration per `App`, allowing you to control which `Apps` and `Functions` are accessible within that `Project`.
-</Note>
+As an example, you can add the official DeepWiki MCP server by following the steps above with the DeepWiki remote MCP URL.
 
-
-Each Project can configure multiple Apps, but only one configuration per App is allowed to maintain simplicity. App Configurations are prerequisites for using any third-party service with your AI agents and are managed through the ACI Developer Portal.
-
-## Authentication Types
-Each App may support one or more authentication types. You need to select one that works for your use case when creating an `App Configuration`.
-
-All the `Linked Accounts` under the `App Configuration` will use the same authentication type.
-
-- **OAuth2**: The most common authentication type for third-party services, e.g.: Gmail
-  <Note> 
-    For OAuth2-based apps, you can use your own OAuth2 client instead of ACI.dev's default OAuth2 client. Please refer to [OAuth2 White-label](/advanced/oauth2-whitelabel) for more details.
-  </Note>
-- **API Key**: A simple authentication method that uses an API key to authenticate requests, e.g.: Brave Search
-- **No Auth**: Some apps do not require additional authentication, e.g.: Arxiv, Hackernews
+You can discover available remote MCP servers from curated lists like [mcpservers.org <Icon icon="up-right-from-square"/>](https://mcpservers.org/remote-mcp-servers)
