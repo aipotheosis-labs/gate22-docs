@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: "Welcome to the ACI.dev developer documentation"
+description: "Welcome to the Gate22 developer documentation"
 ---
 
 <img
@@ -9,6 +9,7 @@ description: "Welcome to the ACI.dev developer documentation"
   alt="Hero Light"
   width="800"
 />
+
 <img
   className="hidden dark:block"
   src="/images/hero-dark.svg"
@@ -16,68 +17,65 @@ description: "Welcome to the ACI.dev developer documentation"
   width="800"
 />
 
-## What is ACI.dev?
+## What is Gate22?
 
-ACI.dev is an tool-calling and unified MCP server platform created by Aipolabs that helps developers connect AI agents to applications like Zendesk, Slack, Gmail, or their own internal tools, manage AI agent actions, and discover workflows.
+Gate22 is an tool-calling and unified MCP server platform created by Aipolabs that helps centrally manage, share, and secure MCP connections for your entire engineering organization.
 
+## Why AI tool usage governance matters
 
-## What can you do with ACI.dev?
+MCPs (Model Context Protocols) unlock new possibilities for the AIs you are already using, but they come with vulnerabilities and can overload agent context. That's why you need a centralized hub to govern how AI tools interact with MCPs.
+Gate22 is an AI governance platform that provides enterprise-grade control, security, and observability for your MCP servers.
 
+## What can you do with Gate22?
 
-<CardGroup cols={1}>
-  <Card
-    title="Integrate B2B SaaS tools"
-  >
-    Add a host of B2B SaaS tools easily to your agentic worker through our pre-built integrations. Immediately ready to use with our built-in authenticated tool-calling.
-  </Card>
-  <Card
-    title="Handle end-user authentication"
-  >
-    Allow your users to securely connect to their own accounts with services like Gmail and Slack for agentic workers to perform actions on their behalf.
-  </Card>
-  <Card
-    title="Guardrail API executions by instruction filters"
-  >
-    Improve agentic worker reliability by using natural language to set flexible filters that block API execution if an agent is making an API request beyond its intended purposes.
-  </Card>
-  <Card
-    title="Discover agentic workflows"
-  >
-    Allow agents to dynamically discover applications and APIs to use for its tasks to improve agent tool-calling performance without clogging your context window.
-  </Card>
-</CardGroup>
+Gate22 provides two distinct experiences tailored to different roles in your organization
 
-## Develop AI Agent Workers in Minutes
+### Admin View: Enterprise Control
+Managers, executives, and team leaders get comprehensive control over MCP usage:
 
-Try ACI.dev now and simplify the hardest parts of developing AI agents.
+- **Function-Level Permissions --** Control access to specific MCP functions, not just entire servers
+- **Team Organization --** Create teams and assign MCP access based on organizational structure
+- **MCP Management --** Integrate and manage both external and internal MCP servers
+- **Governance Dashboard --** Monitor usage patterns and maintain compliance
 
+### Member View: Streamlined Access
+
+Team members get simplified, secure access to approved MCPs
+
+- **Unified MCP Bundles --** Combine multiple MCP servers into a single, optimized interface
+- **Reduced Complexity --** Access all approved tools through just two functions: `search` and `execute`
+- **Context Efficiency --** Overcome AI agent limitations without sacrificing functionality
+- **Secure URLs --** Bundle URLs function like service tokens, maintaining security while enabling access
+
+## Get Started with Gate22
+Start governing your organization's AI tool usage today.
 <CardGroup cols={2}>
   <Card
     title="Quickstart Guide"
     icon="rocket"
     href="/introduction/quickstart"
   >
-    Start building your agentic worker with ACI.dev immediately.
+    Set up your first MCP bundle and start managing AI tool access in minutes.
   </Card>
   <Card
-    title="Reference APIs"
-    icon="code"
-    href="/api-reference/overview"
+    title="Admin View"
+    icon="shield"
+    href="/admin-view/"
   >
-    View API references and documentation.
+    Enterprise control and governance for managers and team leaders.
   </Card>
   <Card
-    title="Python SDK"
-    icon="screwdriver-wrench"
-    href="https://github.com/aipotheosis-labs/aci-python-sdk"
+    title="Member View"
+    icon="users"
+    href="/member-view/"
   >
-    Check out our Python SDK directly.
+    Streamlined access and unified MCP bundles for team members.
   </Card>
   <Card
-    title="Developer Portal"
-    icon="stars"
-    href="https://platform.aci.dev"
+    title="MCP Servers"
+    icon="server"
+    href="/mcp-servers/"
   >
-    Manage your agentic worker integrations through our developer portal.
+    Learn about available MCP servers and unified server architecture.
   </Card>
 </CardGroup>

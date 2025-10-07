@@ -1,19 +1,60 @@
 ---
-title: 'Project'
-description: 'A Project is a logical container for isolating and managing resources.'
-icon: 'folder'
+title: 'Teams and Organizations'
+description: 'Manage team members, roles, and organizational settings for your MCP server deployments.'
+icon: 'building'
 ---
 
+## Overview
+
+**Settings** is where you manage teams and users within your organization. This is your central hub for controlling access, defining roles, and maintaining organizational structure for your MCP server deployments.
+
+## Settings Sections
+
+The Settings tab provides three key management areas:
+
+### Organization
+- **Organization Information**: View and manage your organization details
+- **Organization ID**: Unique identifier for your organization
+- **Organization Name**: Your organization's display name
+- **Your Role**: Your current role within the organization (Admin, Member, etc.)
+
+### Teams
+- **Team Management**: Create and manage teams within your organization
+- **Team Structure**: Organize users into logical groups (e.g., Engineering, Marketing, General Use)
+- **Team Descriptions**: Add context and purpose for each team
+- **Team Access Control**: Define which MCP servers and bundles each team can access
 
 <Frame>
-  <img src="/images/platform/project.png" alt="Project Concept Illustration" />
+  <img src="/images/platform/settings-create-team.png" alt="Create Team Interface" />
 </Frame>
 
-- Owned by either a user or an organization
-- Contains **configured** `Apps`, `Agents` (and their API Keys), and `Linked Accounts`
-- Serves as a boundary for resource management and permissions
+### Members
+- **Member Overview**: View all organization members and their roles
+- **Role Assignment**: Assign Admin or Member roles to users
+- **Invitation Management**: Send invitations to new members
+- **Active vs Pending**: Track active members and pending invitations
 
+<Frame>
+  <img src="/images/platform/settings-invite-member.png" alt="Invite Member Interface" />
+</Frame>
+
+## Key Benefits
+
+### Least Privilege Access
+- **Default Security**: Teams have NO access to MCP servers by default
+- **Explicit Permissions**: You must explicitly grant access to specific servers
+- **Granular Control**: Fine-tune permissions based on team needs
+
+### Role-Based Access Control
+- **Admin Role**: Full access to organization settings, team management, and MCP server configuration
+- **Member Role**: Access to assigned teams and their associated MCP servers
+- **Clear Hierarchy**: Well-defined roles ensure proper access control
+
+### Organizational Structure
+- **Team Organization**: Reflect your company's structure within Gate22
+- **Resource Management**: Organize MCP servers and bundles by team
+- **Collaboration**: Enable team-based workflows and shared resources
 
 <Note>
-  A `Project` is your workspace within the platform. It's where you configure `Apps`, create and manage `Agents` (and their API Keys), and manage `Linked Accounts`. Each `Project` has its own resources and settings, allowing you to create isolated environments for different use cases or clients.
+  Effective team and user management is essential for maintaining security and ensuring that the right people have access to the right resources at the right time.
 </Note>
