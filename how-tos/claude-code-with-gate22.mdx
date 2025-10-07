@@ -1,0 +1,75 @@
+---
+title: 'Claude Code with Gate22'
+description: 'Learn how to integrate Gate22 with Claude Code'
+icon: 'code'
+---
+
+## Overview
+
+This guide walks you through connecting Claude Code CLI to your Gate22 unified MCP server.
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- Claude Code CLI installed on your machine
+- A Gate22 account with at least one configured MCP bundle
+
+## Step 1: Get Your MCP Bundle URL
+
+1. Navigate to your MCP Bundles in the Gate22 dashboard
+2. Click on the bundle you want to connect
+3. Copy the MCP URL displayed
+
+<Frame>
+  <img src="/images/platform/quickstart-copy-mcpurl.png" alt="Copy MCP Bundle URL" />
+</Frame>
+
+## Step 2: Add Gate22 Server to Claude Code
+
+### Method 1: Using CLI Command (Recommended)
+
+Use the `claude mcp add` command to configure your Gate22 bundle:
+
+```bash
+claude mcp add -t http gate22 https://mcp.aci.dev/gateway/mcp?bundle_key=YOUR_BUNDLE_KEY_HERE
+```
+
+Replace `YOUR_BUNDLE_KEY_HERE` with your actual MCP bundle URL from Step 1.
+
+### Method 2: Direct Configuration File
+
+Alternatively, you can directly edit the Claude Code configuration file:
+
+**Location:** `~/.claude.json`
+
+Add this configuration:
+
+```json
+{
+  "mcpServers": {
+    "gate22": {
+      "type": "http",
+      "url": "https://mcp.aci.dev/gateway/mcp?bundle_key=YOUR_BUNDLE_KEY_HERE"
+    }
+  }
+}
+```
+
+## Step 3: Verify Claude Code has access to the Gate22 server
+
+1. Start Claude Code and use the `/mcp` command
+2. You should see the newly added Gate22 MCP server
+
+## Step 4: Test Your Gate22 Bundle
+
+In Claude Code, use the `/mcp` command - you should see that the Gate22 server is "✔ connected":
+
+Test the Gate22 tools by asking:
+
+```
+Search all the available functions in my Gate22 integration
+```
+
+Verify Claude's response matches your expectation and that it can access the tools from your configured MCP servers.
+
