@@ -4,6 +4,26 @@ description: 'Dynamic server with meta functions for discovering and executing a
 icon: 'circle-nodes'
 ---
 
+### Remote vs. Local MCP Servers
+
+Understanding the difference between remote and local MCP servers is crucial:
+
+**Local MCP Servers:**
+- Run directly on your machine (localhost)
+- Require local installation and configuration
+- Each MCP server runs as a separate process
+- Limited to services you can install and run locally
+- Example: A GitHub MCP server running on your laptop
+
+**Remote MCP Servers (Gate22's Approach):**
+- Hosted and managed in the cloud
+- No local installation required
+- Gate22 acts as a **proxy** to remote MCP servers
+- Access multiple services through a single URL
+- Centralized authentication and governance
+- Example: Gate22's unified MCP bundle URL that provides access to GitHub, Notion, Linear, and more
+
+
 ## Overview
 
 The Unified MCP Server provides a smart, scalable approach to function calling by exposing just two meta functions (tools) that can:

@@ -4,6 +4,30 @@ description: 'View and manage your personal account connections to integrated se
 icon: 'users'
 ---
 
-The [ACI SDK <Icon icon="up-right-from-square"/>](https://github.com/aipotheosis-labs/aci-python-sdk) provides a utility function to convert your local functions to the format required by different LLM providers. (e.g. OpenAI, Anthropic, etc.)
+## Overview
 
-For details, please refer to the [Custom Functions <Icon icon="up-right-from-square"/>](https://github.com/aipotheosis-labs/aci-python-sdk?tab=readme-ov-file#to_json_schema)
+The **Connected Accounts** tab allows you to manage your personal connections to various MCP servers and integrated services. Depending on your admin's configuration, you'll either connect your own account or use an organization-shared one.
+
+## Account Connection Process
+
+### Connecting Your Own Accounts
+
+When MCP servers are set to "bring your own credentials," you'll need to connect your individual accounts:
+
+
+#### Steps to Connect:
+1. **Select MCP Server**: Choose the MCP server configuration you want to connect to
+2. **Authentication Method**: 
+   - **OAuth**: You'll be redirected to the service provider for authentication
+   - **API Key**: Enter your personal API key
+   - **No Authentication**: Some services don't require credentials
+3. **Confirm Connection**: Complete the authentication process
+
+### Account Types
+
+- **Individual Developer Accounts**: Your personal accounts connected when "bring your own credentials" is configured
+- **Organization-Shared Accounts**: Pre-configured accounts managed by administrators
+
+<Note>
+  The authentication method depends on how your administrator has configured each MCP server. Contact your admin if you need access to additional services or have questions about account requirements.
+</Note>

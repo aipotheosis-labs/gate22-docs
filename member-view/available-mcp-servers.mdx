@@ -3,19 +3,26 @@ title: 'Available MCP Servers'
 description: 'Browse and discover MCP servers available for your use in the organization.'
 icon: 'list'
 ---
-The [ACI Python SDK <Icon icon="up-right-from-square"/>](https://github.com/aipotheosis-labs/aci-python-sdk) offers a convenient way to access the ACI REST API from any Python 3.10+ application.
 
-In most cases, you should use the SDK to interact with our system programmatically unless you have a specific reason to call the API directly.
+## Overview
 
-Both the SDK and API are currently in beta, so breaking changes may occur.
+Developers see what admins have allowed them to use with IDEs, AI tools, or internal AI agents. This view shows all MCP server configurations that have been made available to your team.
+
+
+## Creating Bundles
+
+You can create **bundles** - these condense multiple MCP servers into a single endpoint with just 2 tools. This conserves context instead of dozens of tools, you get: search and execute, preventing context overload while maintaining high tool-use accuracy.
+
+<Frame>
+  <img src="/images/platform/memview-available-mcp.png" alt="Available MCP Servers Member View" />
+</Frame>
+
+### Benefits of Bundling
+- **Context Conservation**: Reduces the number of tools from dozens to just 2 (search and execute)
+- **Improved Performance**: Prevents context overload in AI tools
+- **High Accuracy**: Maintains tool-use accuracy while simplifying the interface
+- **Unified Endpoint**: Single endpoint for multiple MCP servers
 
 <Note>
-SDKs for additional languages are coming soon. If you're interested in contributing to our open-source SDKs, please [reach out <Icon icon="envelope"/>](mailto:support@aipolabs.xyz)!
-</Note>
-
-## Usage
-**ACI.dev** is built with **agent-first** principles. Although you can call each of the APIs and use the SDK any way you prefer in your application, we strongly recommend trying the [Agent-centric <Icon icon="up-right-from-square"/>](https://github.com/aipotheosis-labs/aci-python-sdk?tab=readme-ov-file#agent-centric-features) features and taking a look at the [agent examples <Icon icon="up-right-from-square"/>](https://github.com/aipotheosis-labs/aci-agents/tree/main) to get the most out of the platform and to enable the full potential and vision of future agentic applications.
-
-<Note>
-For complete and up-to-date documentation, please check out the [SDK repository <Icon icon="up-right-from-square"/>](https://github.com/aipotheosis-labs/aci-python-sdk).
+  Only MCP servers that your admin has configured and made available to your team will appear in this list. Contact your administrator if you need access to additional services.
 </Note>

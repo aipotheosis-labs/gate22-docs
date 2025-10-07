@@ -4,22 +4,25 @@ description: 'Manage user account connections and authentication settings for in
 icon: 'users'
 ---
 
+## Overview
 
-Function in our platform is equivalent to the concept of `Function` or `Tool` in function/tool calling.
-Functions are logically grouped by the App they belong to.
+The **Connected Accounts** tab shows all accounts connected to MCPs across your organization. This comprehensive view is essential for security auditing and account management.
 
-<Frame>
-  <img src="/images/platform/functions.png" alt="Function Concept Illustration" />
-</Frame>
+## Account Types
 
-## Each Function:
+The Connected Accounts view displays three types of accounts:
 
-- Have a unique name across the platform, typically in the format `APP_NAME__FUNCTION_NAME` (e.g., "GITHUB__STAR_REPOSITORY")
-- Is compatible with function calling schema of OpenAI, Anthropic etc
-- Define the parameters they accept and the response they return
-- Handle the communication with external services
-- Inherit the authentication configuration from the App
+### Operational Accounts
+- **Purpose**: Used by Gate22 to retrieve tool lists from MCP servers
+- **Usage**: Required for custom MCP servers to enable dynamic search functionality
+- **Security**: Managed by administrators with specific permissions
 
-<Note>
-  Functions are the building blocks that AI agents use to interact with external services. Each function has a specific purpose, such as creating a GitHub repository or sending a Slack message.
-</Note>
+### Organization-Shared Accounts
+- **Purpose**: Shared across teams within your organization
+- **Usage**: Common services that multiple teams need access to
+- **Management**: Controlled by organization administrators
+
+### Individual Developer Accounts
+- **Purpose**: Personal accounts connected by individual team members
+- **Usage**: Developer-specific integrations and personal workflows
+- **Control**: Managed by individual users with organizational oversight

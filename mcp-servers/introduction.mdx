@@ -1,41 +1,39 @@
 ---
 title: 'Introduction'
-description: 'Learn about the two types of MCP servers available: Apps Server and Unified Server for accessing ACI.dev functions.'
+description: "Learn about Gate22's Unified MCP Server approach for accessing multiple services through a single endpoint."
 icon: 'book'
 ---
 
+## What is Model Context Protocol (MCP)?
 
-## Overview
-Apart from using ACI.dev's Apps/Functions (tools) directly via LLM function (tool) calls, we also provide two types of Model Context Protocol (MCP) servers that allow your MCP clients to access all Apps/Functions (tools) available on ACI.dev platform.
-The codebase is open source and can be found here: [aci-mcp <Icon icon="up-right-from-square"/>](https://github.com/aipotheosis-labs/aci-mcp).
+The [Model Context Protocol (MCP) <Icon icon="up-right-from-square"/>](https://modelcontextprotocol.io) is an open standard developed by Anthropic that enables seamless integration between large language models (LLMs) and various external data sources, tools, and applications. By establishing a standardized communication framework, MCP allows AI models to access and interact with diverse resources, enhancing their functionality and contextual awareness.
 
+### Key Benefits of MCP
 
-## Two Types of MCP Servers
-- **Apps MCP Server**: This server is similar to most of the existing MCP servers out there, where it exposes a set of functions from a specific app (e.g., Gmail, Github, etc.). However, our `Apps MCP Server` allows you to include multiple apps in a single server.
+- **Standardization**: MCP provides a unified protocol based on JSON-RPC 2.0 that simplifies integration with external services
+- **Flexibility**: The protocol's design allows for custom integrations tailored to specific applications
+- **Interoperability**: MCP ensures AI applications can interact with a wide range of data sources and tools
+- **Extensibility**: New capabilities can be added without modifying the core protocol
 
-  <Frame>
-    <img src="/images/apps-mcp-server-diagram.svg" alt="Apps MCP Server"/>
-  </Frame>
-- **Unified MCP Server**: This server is a dynamic server that provides two **meta** functions (tools) - `ACI_SEARCH_FUNCTIONS` and `ACI_EXECUTE_FUNCTION` to dynamically discover and execute **ANY** functions (tools) available on ACI.dev platform.
+For more information, visit the [official MCP documentation <Icon icon="up-right-from-square"/>](https://modelcontextprotocol.io/docs).
 
-  <Frame>
-    <img src="/images/unified-mcp-server-diagram.svg" alt="Unified MCP Server"/>
-  </Frame>
+## Gate22's MCP Implementation
 
-## Comparison
+Gate22 uses the **Unified MCP approach** by bundling multiple MCP servers into a single unified MCP server. This innovative architecture provides a streamlined way to access multiple services and tools through one endpoint, while maintaining full security and governance controls.
 
-- **When to use the Apps MCP Server?**
-  - When you know exactly what apps the LLM/Agent needs in advance.
-  - When the number of apps, and therefore the associated functions, needed is relatively small. 
-    <Note>
-      There is no definitive answer to `what number of functions (tools) is too many?`, but the more functions (tools) you add to the model's context window, the lower the performance of the LLM function calling.
-    </Note>
+### The Unified MCP Bundle Advantage
 
-- **When to use the Unified MCP Server?**
-  - When you don't know exactly what apps the LLM/Agent needs in advance.
-  - When the number of apps and therefore the associated functions needed is large.
-  - When you want all future apps added to ACI.dev to be discoverable by your LLM/Agent without having to update the MCP command.
+Gate22 extends the standard MCP architecture by:
 
+1. **Bundling**: Combine multiple MCP servers (e.g., GitHub, Notion, Linear) into a single unified endpoint
+2. **Proxy Architecture**: Gate22 serves as a secure proxy layer between your AI tools and remote MCP servers
+3. **Context Optimization**: Instead of exposing dozens or hundreds of tools, bundles provide just 2 meta-functions: `search` and `execute`
+4. **Security & Governance**: Centralized authentication, permissions, and audit trails
+5. **Scalability**: Add or remove MCP servers without reconfiguring your AI tools
+
+<Frame>
+  <img src="/images/platform/gate22-architecture-light-bg.svg" alt="Gate22 Unified MCP Architecture" />
+</Frame>
 
 ## Next Steps
 
