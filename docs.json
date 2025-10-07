@@ -40,11 +40,12 @@
             ]
           },
           {
-            "group": "MCP Servers",
+            "group": "How Tos",
             "pages": [
-              "mcp-servers/introduction",
-              "mcp-servers/unified-server",
-              "mcp-servers/apps-server"
+              "how-tos/claude-code-with-gate22",
+              "how-tos/claude-web-with-gate22",
+              "how-tos/cursor-with-gate22",
+              "how-tos/chatgpt-with-gate22"
             ]
           }
         ]

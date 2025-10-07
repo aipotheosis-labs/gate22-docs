@@ -1,0 +1,68 @@
+---
+title: 'ChatGPT with Gate22'
+description: 'Learn how to integrate Gate22 with ChatGPT'
+icon: 'message'
+---
+
+## Overview
+
+This guide walks you through connecting ChatGPT to your Gate22 unified MCP server.
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- A ChatGPT Plus or Pro account
+- A Gate22 account with at least one configured MCP bundle
+
+## Step 1: Get Your MCP Bundle URL
+
+1. Navigate to your MCP Bundles in the Gate22 dashboard
+2. Click on the bundle you want to connect
+3. Copy the MCP URL displayed
+
+<Frame>
+  <img src="/images/platform/quickstart-copy-mcpurl.png" alt="Copy MCP Bundle URL" />
+</Frame>
+
+## Step 2: Enable Developer Mode in ChatGPT
+
+1. Click on your account icon (bottom left) → Settings → Connectors
+2. Scroll down to find "Advanced settings"
+3. Enable "Developer mode"
+
+<Frame>
+  <img src="/images/platform/devmode-toggle.png" alt="Enable Developer Mode in ChatGPT" />
+</Frame>
+
+## Step 3: Connect to Gate22
+
+1. Return to the Connectors page and click "Create"
+2. Configure the MCP server:
+   - **Name**: Provide a name for your MCP server (e.g., "Gate22")
+   - **MCP URL**: Paste the Gate22 bundle URL you copied in Step 1
+   - **Authentication**: Leave as "No Authentication"
+   - **Check**: "I trust this application"
+3. Click "Create"
+
+<Frame>
+  <img src="/images/platform/chatgpt-connector.png" alt="Create MCP Connector in ChatGPT" />
+</Frame>
+
+## Step 4: Test the Connection
+
+1. Start a new chat in ChatGPT
+3. Add your Gate22 connector
+
+<Frame>
+  <img src="/images/platform/enable-gate22.png" alt="Enable Gate22 in ChatGPT Chat UI" />
+</Frame>
+
+4. Ask ChatGPT:
+
+```
+Search all the available functions in my Gate22 integration
+```
+
+5. Verify the response matches your expectations.
+

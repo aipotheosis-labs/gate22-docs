@@ -1,0 +1,49 @@
+---
+title: 'Claude Web with Gate22'
+description: 'Learn how to integrate Gate22 with Claude Web'
+icon: 'globe'
+---
+
+## Overview
+
+This guide walks you through connecting Claude (web interface) to your Gate22 unified MCP server.
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- An account on Claude
+- A Gate22 account with at least one configured MCP bundle
+
+## Step 1: Get Your MCP Bundle URL
+
+1. Navigate to your MCP Bundles in the Gate22 dashboard
+2. Click on the bundle you want to connect
+3. Copy the MCP URL displayed
+
+<Frame>
+  <img src="/images/platform/quickstart-copy-mcpurl.png" alt="Copy MCP Bundle URL" />
+</Frame>
+
+## Step 2: Add MCP Connection in Claude
+
+1. Go to Claude MCP connectors and click on "Add custom connector"
+2. Name the connector, paste in the MCP URL you copied from above, and click "Add"
+
+<Frame>
+  <img src="/images/platform/quickstart-add-connectors.png" alt="Add MCP Connector" />
+</Frame>
+
+## Step 3: Verify the Connection
+
+1. Create a new chat in Claude
+2. You should see your MCP connector available in the chat
+3. Test the connection by asking:
+
+```
+Search all the available functions in my Gate22 integration
+```
+
+4. Grant Claude access to use the Gate22 bundle when prompted
+5. Verify Claude's response matches your expectation
+

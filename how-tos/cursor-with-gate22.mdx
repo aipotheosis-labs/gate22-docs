@@ -1,0 +1,58 @@
+---
+title: 'Cursor with Gate22'
+description: 'Learn how to integrate Gate22 with Cursor'
+icon: 'code'
+---
+
+## Overview
+
+This guide walks you through connecting Cursor to your Gate22 unified MCP server.
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- Cursor installed on your machine
+- A Gate22 account with at least one configured MCP bundle
+
+## Step 1: Get Your MCP Bundle URL
+
+1. Navigate to your MCP Bundles in the Gate22 dashboard
+2. Click on the bundle you want to connect
+3. Copy the MCP URL displayed
+
+<Frame>
+  <img src="/images/platform/quickstart-copy-mcpurl.png" alt="Copy MCP Bundle URL" />
+</Frame>
+
+## Step 2: Configure MCP in Cursor
+
+1. Open Cursor and go to Settings (Cmd/Ctrl + ,)
+2. Navigate to "Tools & MCP"
+3. Click "Add New MCP Server"
+4. Paste the MCP configuration in the JSON format:
+
+```json
+{
+  "mcpServers": {
+    "gate22": {
+      "url": "https://mcp.aci.dev/gateway/mcp?bundle_key=YOUR_BUNDLE_KEY_HERE"
+    }
+  }
+}
+```
+
+Replace `YOUR_BUNDLE_KEY_HERE` with your actual MCP bundle URL from Step 1.
+
+## Step 3: Verify the Connection
+
+1. Restart Cursor to ensure the MCP server is loaded
+2. Open a new chat or use the AI assistant
+4. Test the connection by asking:
+
+```
+Search all the available functions in my Gate22 integration
+```
+
+5. Verify the response matches your expectations and that Cursor can access the tools from your configured MCP servers.
+
